@@ -1,0 +1,771 @@
+@charset "UTF-8";
+@import url("font.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+ul li {
+    list-style: none;
+}
+
+a, p ,li, b, h1, h2, th ,td {
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    background: #000;
+}
+
+html { scroll-behavior: smooth; }
+
+/* 첫번째 섹션 */
+.section1 {
+    height: 100vh;
+    width: 100%;
+    background: #000 url("../image/daegu_bg.png") no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_warp {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 55px;
+    height: 100%;
+    width: 80%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 670px;
+    justify-content: space-between;
+}
+
+.main_text_top {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.main_text_top p {
+    font-family: "jeju";
+    font-size: 25px;
+}
+
+.main_text_top b {
+    font-family: "pretendard";
+    font-size: 43px;
+}
+
+.main_text_bottom {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 40px;
+    row-gap: 20px;
+    align-items: center;
+    color: #fff;
+}
+
+.main_text_bottom dt,
+.main_text_bottom dd  {
+    margin: 0;
+    font-family: "jeju";
+    font-size: 18px;
+    min-height: 45px;
+    display: flex;
+    align-items: center;   
+}
+
+.main_text_bottom dt::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #DE0078;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.tool_img {
+    vertical-align: middle;
+    margin-right: 14px;
+}
+
+.tool_img img {
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    object-fit: contain;
+}
+
+.daegu_culture_img {
+    width: 850px;
+}
+
+/* 두번째 섹션 */
+.section2 {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(0deg, #450025 0%, #000 100%);
+}
+
+.section2::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' width='512' height='512'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 500px 500px;
+    background-repeat: repeat;
+
+    opacity: 1;
+    mix-blend-mode: soft-light;
+}
+
+.background_warp {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    gap: 55px;
+    width: 80%;
+    height: 70vh;
+}
+
+.background {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.background span {
+    position: absolute;
+    color: #fff;
+    font-family: "jeju";
+    font-size: 22px;
+    top: 0;
+    left: -50px;
+}
+
+.background_warp h1 {
+    font-family: "jeju";
+    font-size: 55px;
+}
+
+.background_text_warp {
+    display: flex;
+    justify-content: space-between;
+    height: 70%;
+    gap: 140px;
+}
+
+.background_text_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.background_text_left h2,
+.background_text_right h2 {
+    font-family: "pretendard";
+    font-size: 32px;
+}
+
+.background_text_left p,
+.background_text_left li {
+    font-family: "pretendard";
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.background_text_left li {
+    gap: 35px;
+}
+
+.background_text_left b {
+    font-family: "pretendard_bold";
+    font-size: 20px;
+}
+
+.background_text_left li {
+    margin-bottom: 8px;
+}
+
+.background_text_left p {
+    margin-right: 35px;
+}
+
+.background_text_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.background_text_right ul {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.background_text_right li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 11px 28px;
+    border-radius: 36px;
+    color: #fff;
+    z-index: 0;
+    font-family: "pretendard";
+    font-size: 18px;
+    gap: 25px;
+}
+
+.background_text_right li::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0.05);
+    filter: blur(2px);
+    z-index: -1;
+    border: #fff 1px solid;
+}
+
+.background_text_right li::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: rgba(255, 255, 255, 0.05);
+    filter: blur(4px);
+    z-index: -2;
+    border: #DE0078 3px solid;
+}
+
+.background_text_right p {
+    font-family: "pretendard";
+    font-size: 18px;
+}
+
+
+/* 세번째 섹션 */
+
+.section3 {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.Analysis_warp {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    height: 70vh;
+}
+
+.Analysis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 50px;
+}
+
+.Analysis span {
+    position: absolute;
+    color: #fff;
+    font-family: "jeju";
+    font-size: 22px;
+    top: 0;
+    left: -50px;
+}
+
+.Analysis h1 {
+    font-family: "jeju";
+    font-size: 55px;
+}
+
+.Analysis_table {
+    width: 100%;
+    margin-left: -100px;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    border-radius: 16px;
+}
+
+.Analysis_table thead th {
+    padding: 35px 0px;
+    border-right: 1px solid #333333;
+}
+
+.Analysis_table thead th:last-child {
+    border-right: none;
+}
+
+.Analysis_table tbody th.row-label {
+    text-align: right;
+    font-family: "jeju";
+    font-size: 25px;
+    color: #fff;
+    padding: 24px 18px;
+    vertical-align: top;
+    border-right: 1px solid #333333;
+    position: relative;
+}
+
+.Analysis_table tbody th.row-label::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 100000px;
+    content: "";
+    border-top: 1px solid #333333;
+}
+
+.Analysis_table tbody td {
+    padding: 24px 18px;
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    vertical-align: top;
+}
+
+.Analysis_table li {
+    display: flex;
+    position: relative;
+    font-family: "pretendard";
+    color: #909090;
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 20px;
+}
+.Analysis_table li::before {
+    position: absolute;
+    top: 50%;
+    left: -18px;
+    content: "";
+    width: 4px;
+    height: 4px;
+    background: #909090;
+    border-radius: 50%;
+}
+
+.Analysis_table tbody td li b {
+    color: #fff;
+    font-family: "pretendard";
+    font-size: 16px;
+}
+
+.Analysis_table tbody tr td:last-child {
+    border-right: 0
+}
+
+.row-bench th.row-label.bench {
+    color: #ff2f86;
+}
+
+
+
+/* 네번째 섹션 */
+.section4 {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.solution_wrap {
+    width: 80%;
+    max-width: 1200px;
+    height: 70vh;
+    position: relative;
+    z-index: 1;
+}
+
+.solution {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    height: 100%;
+}
+
+.solution h1 {
+    font-family: "jeju";
+    font-size: 55px;
+    margin: 0;
+    position: relative;
+}
+
+.solution h1 span {
+    position: absolute;
+    left: -50px;
+    top: 2px;
+    font-family: "jeju";
+    font-size: 22px;
+    color: #fff;
+}
+
+.ps-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    column-gap: 36px;
+    height: 135px;
+    border-radius: 999px;
+    padding: 0 28px;
+    background:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E"),
+        rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow:
+        inset 0 0 15px rgba(255, 255, 255, 0.4),
+        0 8px 25px rgba(0, 0, 0, 0.4);
+
+    backdrop-filter: blur(8px);
+}
+
+.ps-head {
+    height: 60px;
+    padding: 0 40px;
+    background: #000;
+    box-shadow: none;
+    border: none;
+}
+
+.ps-head .ps-cell {
+    font-family: "pretendard";
+    font-size: 22px;
+    color: #cfcfcf;
+    text-align: center;
+}
+
+.ps-head .ps-cell.mid {
+    color: #DE0078;
+    font-weight: 700;
+    font-size: 26px;
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+
+.ps-cell {
+    color: #b8b8b8;
+    font-family: "pretendard";
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 8px;
+    word-break: keep-all;
+}
+
+.ps-cell.mid {
+    position: relative;
+    z-index: 0;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 999px;
+    height: 100%;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+        background:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E"),
+        rgba(0, 0, 0, 100);
+
+    box-shadow:
+        inset 0 0 60px rgba(255, 0, 138, 100),
+        0 8px 25px rgba(255, 255, 255, 0.1);
+
+        border: rgba(255, 0, 138, 0.5) solid 1px;
+}
+
+.ps-row:nth-of-type(2) {
+    padding: 0 36px;
+}
+
+.ps-row:nth-of-type(3) {
+    padding: 0 40px;
+}
+
+.ps-row:nth-of-type(4) {
+    padding: 0 44px;
+}
+
+
+/* 메인 시안 */
+
+.section6 {
+    margin-top: 200px;
+    width: 100%;
+}
+
+.daegu_main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    position: relative;
+}
+
+.main_bg1 {
+    position: absolute;
+    z-index: -1;
+    top: -300px;
+}
+.main_bg2 {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
+}
+
+.daegu_main h5 {
+    font-family: "moniqa";
+    font-feature-settings: "salt";
+    font-weight: normal;
+    font-size: 150px;
+    color: #fff;
+    margin-bottom: -30px;
+}
+
+.main_text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+}
+
+.main_text p {
+    font-family: "pretendard";
+    font-size: 16px;
+    color: #909090;
+}
+
+.main_text b {
+    font-family: "pretendard";
+    font-size: 16px;
+    color: #fff;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.layout_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.layout_text div {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    position: relative;
+}
+
+.layout_text div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.layout p {
+    font-family: "pretendard";
+    font-size: 16px;
+    color: #909090;
+}
+
+.layout b {
+    font-family: "pretendard";
+    font-size: 16px;
+    color: #fff;
+}
+
+.layout_text > .layout1 {
+    top: 100px;
+}
+
+.layout_text > .layout2 {
+    top: 450px;
+}
+
+.layout_text > .layout3 {
+    top: 600px;
+}
+
+.layout_text > .layout4 {
+    top: 960px;
+}
+
+.layout_text > .layout5 {
+    top: 1050px;
+}
+
+
+
+
+.main_sub {
+    margin: 100px 0;
+}
+
+.daegu_sub_warp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 200px;
+    margin-bottom: 300px;
+}
+
+.daegu_sub_warp h5 {
+    font-family: "moniqa";
+    font-feature-settings: "salt";
+    font-weight: normal;
+    font-size: 150px;
+    color: #fff;
+}
+
+/* 서브 1 */
+
+.daegu_sub1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 서브 2 */
+
+.daegu_sub2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*=====Quick Nav (오른쪽 고정)=====*/ 
+.quicknav {
+    position: fixed;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 9999;
+}
+
+.quicknav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.quicknav a {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    font-family: "pretendard";
+    font-size: 14px;
+    line-height: 1;
+    color: #cfcfcf;
+    text-decoration: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    transition: .25s ease;
+}
+
+.quicknav a:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.quicknav a.active {
+    color: #fff;
+    border-color: rgba(222, 0, 120, .65);
+    box-shadow: 0 0 20px rgba(222, 0, 120, .35), inset 0 0 0 1px rgba(255, 255, 255, .08);
+    background: radial-gradient(140% 140% at 50% 50%, rgba(222, 0, 120, .18) 0%, rgba(222, 0, 120, 0) 60%),
+        rgba(255, 255, 255, 0.06);
+}
+
+
+.quicknav a{
+  display:flex; align-items:center;
+  padding:8px 14px; border-radius:999px;
+  font: 14px/1 "pretendard";
+  color:#cfcfcf; text-decoration:none;
+  background: rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.2);
+  backdrop-filter: blur(6px);
+  transition: .25s ease;
+}
+.quicknav a:hover{ color:#fff; border-color:rgba(255,255,255,.35); }
+
+.quicknav a.active{
+  color:#fff;
+  border-color: rgba(222,0,120,.7);
+  background:
+    radial-gradient(140% 140% at 50% 50%, rgba(222,0,120,.22) 0%, rgba(222,0,120,0) 62%),
+    rgba(255,255,255,0.08);
+  box-shadow: 0 0 22px rgba(222,0,120,.35), inset 0 0 0 1px rgba(255,255,255,.08);
+}
+
+
+/* ===== Scroll Reveal: 파일 맨-아래에 두기 ===== */
+:root {
+    --reveal-dur: 700ms;
+    --reveal-dist: 24px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(var(--reveal-dist));
+    filter: blur(6px);
+    transition:
+        opacity var(--reveal-dur) ease,
+        transform var(--reveal-dur) ease,
+        filter var(--reveal-dur) ease;
+    transition-delay: var(--d, 0ms);
+    will-change: opacity, transform, filter;
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}

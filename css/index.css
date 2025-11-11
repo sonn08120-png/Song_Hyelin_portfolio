@@ -681,6 +681,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 27px;
 }
 
 .tool small {
@@ -759,6 +760,7 @@ body {
     padding: 14px 22px;
     text-align: center;
     transition: all 0.3s ease;
+    cursor: pointer;
 
 }
 

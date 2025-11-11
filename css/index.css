@@ -119,7 +119,7 @@ body {
     display: flex;
 }
 
-.title p {
+.title span {
     font-family: "moniqa";
     font-feature-settings: "salt";
     font-weight: normal;
